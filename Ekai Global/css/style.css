@@ -165,7 +165,7 @@ img { max-width: 100%; display: block; }
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 72px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -178,11 +178,10 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-logo-img {
-  height: 52px;
+  height: 200px;
   width: auto;
   display: block;
   object-fit: contain;
-  /* Crisp rendering for logo */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -447,7 +446,7 @@ img { max-width: 100%; display: block; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 64px;
   align-items: start;
 }
@@ -496,7 +495,24 @@ img { max-width: 100%; display: block; }
   gap: 24px;
 }
 
-.shield-big svg { width: 200px; height: auto; filter: drop-shadow(var(--shadow)); }
+.about-logo-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+.about-logo-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
 
 .mission-card {
   background: var(--white);
