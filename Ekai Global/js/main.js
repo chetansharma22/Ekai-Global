@@ -143,8 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // });
 
         // ── For now: simulate a successful submission (remove for production)
-        await new Promise(r => setTimeout(r, 1500));
-        const res = { ok: true };
+       const res = await fetch('https://formspree.io/f/mreygdjb', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
 
         if (res.ok) {
           form.reset();
