@@ -1,8 +1,7 @@
 # Netlify configuration for Ekai Global
 
 [build]
-  publish = "."
-  command = ""
+  publish = "ekai-global"
 
 # Redirect all 404s to index.html for SPA (not needed for static, but good practice)
 [[redirects]]
