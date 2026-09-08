@@ -541,7 +541,23 @@ img { max-width: 100%; display: block; }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+/* Add this anywhere inside the Services section of your CSS */
+.service-category-title {
+  grid-column: 1 / -1; /* Makes it span all 3 columns */
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin: 16px 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
 
+@media (max-width: 768px) {
+  .service-category-title {
+    font-size: 1.5rem;
+    margin-top: 24px;
+  }
+}
 .service-card {
   background: var(--white);
   border: 1.5px solid var(--border);
