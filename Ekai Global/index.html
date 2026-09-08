@@ -1,414 +1,811 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ekai Global — Career Guidance & HR Operations</title>
-  <meta name="description" content="Ekai Global helps professionals build strong careers and partners with startups to build robust HR and operational foundations from scratch." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ekai Global | Build Your Career. Scale Your Business.</title>
+<meta name="description" content="Ekai Global bridges the gap between potential and execution. Career acceleration for professionals & turnkey HR/Operations for startups across US, UK, UAE & India.">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "navy-dark": "#0B1528",
+          "navy-slate": "#1E293B",
+          "ekai-orange": "#e65100",
+          "ekai-orange-light": "#ea580c",
+          "ekai-warm": "#f97316",
+          "ekai-amber": "#d97706",
+          "ekai-green": "#10b981",
+          "surface-pure": "#ffffff",
+          "surface-cream": "#fffcf9",
+          "surface-subtle": "#f8fafc",
+          "border-light": "#f1f5f9",
+          "border-medium": "#e2e8f0"
+        },
+        fontFamily: {
+          sans: ["Plus Jakarta Sans", "sans-serif"],
+          serif: ["Newsreader", "Georgia", "serif"]
+        },
+        spacing: {
+          "container-max": "1280px"
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="font-sans text-slate-800 antialiased selection:bg-orange-100 selection:text-ekai-orange bg-white">
 
-  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <img src="images/logo.png" alt="Ekai Global — Guide. Grow. Succeed." class="nav-logo-img" />
+<!-- ═══════════════ TOP UTILITY BAR ═══════════════ -->
+<aside class="w-full bg-slate-50 border-b border-border-medium/70 text-xs text-slate-600">
+  <div class="max-w-container-max mx-auto px-4 md:px-8 py-1.5 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2 sm:gap-3">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[10px] border border-emerald-200">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        Global Footprint
+      </span>
+      <span class="text-slate-500 hidden sm:inline text-[11px]">United States • United Kingdom • UAE • India</span>
+    </div>
+    <div class="flex items-center gap-4 text-[11px]">
+      <a class="hover:text-ekai-orange flex items-center gap-1 transition-colors text-slate-600" href="mailto:info@ekaiglobal.com">
+        <span class="material-symbols-outlined text-[14px] text-ekai-orange">mail</span>
+        <span>info@ekaiglobal.com</span>
       </a>
+      <span class="text-slate-300">|</span>
+      <a class="hover:text-ekai-orange flex items-center gap-1 font-semibold text-slate-800 transition-colors" href="tel:+919214953581">
+        <span class="material-symbols-outlined text-[14px] text-emerald-600">call</span>
+        <span>+91 92149 53581</span>
+      </a>
+    </div>
+  </div>
+</aside>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#pathway" class="nav-link">IT Pathway</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="#contact" class="nav-cta">Get Started</a>
-      </nav>
+<!-- ═══════════════ MAIN NAVIGATION ═══════════════ -->
+<header id="mainNav" class="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+  <div class="h-20 max-w-container-max mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
+    
+    <!-- Logo -->
+    <a aria-label="Ekai Global Home" class="flex items-center gap-3 group" href="#hero">
+      <img alt="Ekai Global" class="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105" src="images/logo.png">
+    </a>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+    <!-- Desktop Nav Links -->
+    <nav class="hidden lg:flex items-center gap-1 text-[13.5px] font-medium text-slate-600">
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#hero">Home</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#divisions">Divisions</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-ekai-orange hover:bg-orange-50/50 transition-colors" href="#services-b2c">Career (B2C)</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#services-b2b">Startup HR (B2B)</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#services-prc">Institutes (PRC)</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#calculator">SLA Matrix</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#contact">Contact</a>
+    </nav>
+
+    <!-- Right CTA -->
+    <div class="flex items-center gap-3">
+      <a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all border border-slate-200" href="tel:+919214953581">
+        <span class="material-symbols-outlined text-[15px] text-emerald-600">phone_in_talk</span>
+        <span>+91 92149 53581</span>
+      </a>
+      <a class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm hover:brightness-105 text-white text-xs md:text-sm font-semibold shadow-md shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-1.5 whitespace-nowrap" href="#contact">
+        <span>Get Started</span>
+        <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+      </a>
+      <!-- Mobile Hamburger -->
+      <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Open menu">
+        <span class="material-symbols-outlined text-navy-dark">menu</span>
       </button>
     </div>
-  </header>
+  </div>
 
-  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-  <section class="hero" id="home">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
+    <div class="px-4 py-3 space-y-1">
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#hero">Home</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#divisions">Divisions</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-ekai-orange hover:bg-orange-50" href="#services-b2c">Career (B2C)</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#services-b2b">Startup HR (B2B)</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#services-prc">Institutes (PRC)</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#calculator">SLA Matrix</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#contact">Contact</a>
     </div>
-    <div class="container hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Career Services | HR &amp; Operations
-      </div>
-      <h1 class="hero-title">
-        Build Your Career.<br/>
-        <em>Scale Your Business.</em>
-      </h1>
-      <p class="hero-subtitle">
-        Ekai Global bridges the gap between potential and execution. We empower professionals to accelerate their careers, and partner with founders to build robust HR &amp; operational systems from scratch.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Start Your Journey</a>
-        <a href="#services" class="btn btn-outline">Explore Solutions</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">500+</span>
-          <span class="stat-label">Professionals Guided</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">95%</span>
-          <span class="stat-label">Interview Success</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Startups Scaled</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card card-float-1">
-        <div class="hcard-icon">🎯</div>
-        <div class="hcard-text">Career Path Clarity</div>
-      </div>
-      <div class="hero-card card-float-2">
-        <div class="hcard-icon">📄</div>
-        <div class="hcard-text">ATS Resume Built</div>
-      </div>
-      <div class="hero-card card-float-3">
-        <div class="hcard-icon">⚙️</div>
-        <div class="hcard-text">HR Systems Deployed</div>
-      </div>
-    </div>
-  </section>
+  </div>
+</header>
 
-  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Who We Are</span>
-        <h2 class="section-title">Engineering Success for<br/><em>People &amp; Companies</em></h2>
-        <p class="section-desc">Whether you are an individual trying to navigate your career path or a CEO trying to scale a startup without operational chaos — Ekai Global is your structural backbone.</p>
-      </div>
+<main class="w-full overflow-x-hidden">
 
-      <div class="about-grid">
-        <div class="about-text">
-          <p>At <strong>Ekai Global</strong>, we operate on a simple philosophy: Great talent needs great positioning, and growing companies need great systems.</p>
-          <p><strong>For Individuals:</strong> We provide structured career guidance, elite resume writing, and interview preparation to bridge the gap between academic learning and real-world professional expectations.</p>
-          <p><strong>For Businesses:</strong> We step in as your dedicated HR and Operations partner. We design and implement hiring workflows, compliance policies, and day-to-day operations so founders can focus strictly on product and revenue.</p>
+<!-- ═══════════════ HERO SECTION ═══════════════ -->
+<section class="relative pt-12 md:pt-20 pb-20 md:pb-28 bg-gradient-to-b from-orange-50/30 via-white to-white overflow-hidden" id="hero">
+  <div class="absolute top-10 left-1/4 -translate-x-1/2 w-[550px] h-[550px] bg-orange-100/40 rounded-full blur-[140px] pointer-events-none -z-10 animate-blob"></div>
+  <div class="absolute top-20 right-10 w-[450px] h-[450px] bg-blue-50/60 rounded-full blur-[120px] pointer-events-none -z-10 animate-blob animation-delay-2000"></div>
 
-          <div class="about-pillars">
-            <div class="pillar">
-              <div class="pillar-icon" style="color: var(--blue)">🧭</div>
-              <div>
-                <strong>Career &amp; Interview Clarity</strong>
-                <p>Personalized sessions and ATS-resumes to map your strengths and land top-tier roles.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon" style="color: var(--orange)">⚙️</div>
-              <div>
-                <strong>HR &amp; Startup Operations</strong>
-                <p>End-to-end HR foundations, payroll setups, and compliance systems for scaling businesses.</p>
-              </div>
-            </div>
-          </div>
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-7 flex flex-col items-start">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-100/80 mb-6 text-xs font-semibold text-slate-700 shadow-sm reveal">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Career Services | HR &amp; Operations</span>
         </div>
 
-        <div class="about-visual">
-          <div class="about-logo-wrap">
-            <img src="images/footer-logo.png" alt="Ekai Global" class="about-logo-img" />
-          </div>
-          <div class="mission-card">
-            <div class="mission-icon">🌟</div>
-            <div>
-              <strong>Our Mission</strong>
-              <p>To make quality career guidance accessible to professionals, and provide flawless operational frameworks for the startups that hire them.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h1 class="text-4xl sm:text-6xl xl:text-[68px] font-bold text-navy-dark tracking-tight leading-[1.1] mb-6 reveal">
+          Build Your<br>
+          Career.<br>
+          <span class="serif-accent font-normal text-ekai-orange tracking-normal italic">Scale Your Business.</span>
+        </h1>
 
-  <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
-  <section class="services section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What We Offer</span>
-        <h2 class="section-title">Solutions Designed for<br/><em>Scale &amp; Readiness</em></h2>
-        <p class="section-desc">Two dedicated divisions. One goal: Building strong foundations for lasting success.</p>
-      </div>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8 reveal">
+          Ekai Global bridges the gap between potential and execution. We empower professionals to accelerate their careers, and partner with founders to build robust HR &amp; operational systems from scratch.
+        </p>
 
-      <div class="services-grid">
-        <!-- ── B2C: Career Services ── -->
-        <h3 class="service-category-title">For Students &amp; Professionals</h3>
-        
-        <div class="service-card">
-          <div class="service-icon blue-icon">🧭</div>
-          <h3>Career Clarity Program</h3>
-          <p>1:1 sessions designed to help you explore career options aligned with your strengths. We use structured assessments to map out your next major professional move.</p>
-          <a href="#contact" class="service-link">Learn More →</a>
-        </div>
-
-        <div class="service-card featured-card">
-          <div class="featured-badge">Top Rated</div>
-          <div class="service-icon orange-icon">📄</div>
-          <h3>ATS Resume &amp; LinkedIn</h3>
-          <p>A professionally crafted resume is your first impression. Our experts build ATS-friendly, outcome-focused resumes that get shortlisted by recruiters.</p>
-          <a href="#contact" class="service-link">Learn More →</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon green-icon">🎤</div>
-          <h3>Interview Mastery</h3>
-          <p>We prepare you for every scenario — HR, technical, and behavioral. Get 1:1 mock interviews, feedback, and strategies to negotiate the best salary.</p>
-          <a href="#contact" class="service-link">Learn More →</a>
-        </div>
-
-        <!-- ── B2B: HR & Operations (NEW) ── -->
-        <h3 class="service-category-title" style="margin-top: 24px;">For Startups &amp; Founders</h3>
-
-        <div class="service-card">
-          <div class="service-icon blue-icon">⚙️</div>
-          <h3>HR Systems Setup</h3>
-          <p>Stop managing chaos. We build your HR foundation from scratch—creating structured hiring workflows, professional onboarding, and custom company policies.</p>
-          <ul class="service-list">
-            <li>End-to-end recruitment pipelines</li>
-            <li>Employee handbooks &amp; policies</li>
-            <li>Structured onboarding programs</li>
-          </ul>
-          <a href="#contact" class="service-link">Partner With Us →</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon orange-icon">📊</div>
-          <h3>Payroll &amp; Compliance</h3>
-          <p>Don't let admin work slow you down. We handle the setup and automation of payroll, leave management, and tax compliance to keep your business safe.</p>
-          <ul class="service-list">
-            <li>Payroll system implementation</li>
-            <li>Leave &amp; attendance tracking</li>
-            <li>Legal documentation &amp; contracts</li>
-          </ul>
-          <a href="#contact" class="service-link">Partner With Us →</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon green-icon">🌐</div>
-          <h3>Offshore Ops Partner</h3>
-          <p>For global startups (US/UK/UAE). We act as your dedicated offshore backend execution team in India, giving you top 1% operational talent at a fraction of the cost.</p>
-          <ul class="service-list">
-            <li>Dedicated offshore HR team</li>
-            <li>Tech &amp; software tool setup</li>
-            <li>60% reduction in admin burn</li>
-          </ul>
-          <a href="#contact" class="service-link">Partner With Us →</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ IT PATHWAY ═══════════════════════════ -->
-  <section class="pathway section" id="pathway">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">IT Pathway</span>
-        <h2 class="section-title">Tech Skills. Real Practice.<br/><em>Certified Outcomes.</em></h2>
-        <p class="section-desc">Ekai Global's IT pathway is a structured approach to building technical skills — with an exclusive Udemy discount and a certificate to prove it.</p>
-      </div>
-
-      <div class="pathway-layout">
-        <div class="pathway-steps">
-          <div class="step">
-            <div class="step-num blue-bg">01</div>
-            <div class="step-content">
-              <h4>Enroll &amp; Assess</h4>
-              <p>Take a quick skills assessment. We identify your current level and recommend the most suitable Udemy course for you.</p>
-            </div>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step">
-            <div class="step-num orange-bg">02</div>
-            <div class="step-content">
-              <h4>Receive Your 50% Discount</h4>
-              <p>Get your exclusive Ekai Global coupon code — a 50% discount on your recommended Udemy course.</p>
-            </div>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step">
-            <div class="step-num green-bg">03</div>
-            <div class="step-content">
-              <h4>Complete &amp; Get Certified</h4>
-              <p>Earn a globally recognized Udemy certificate — a credential that speaks to employers worldwide.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="pathway-highlight">
-          <div class="highlight-card">
-            <div class="highlight-badge">🎓 Udemy Partner Benefit</div>
-            <h3>50% Off Your<br/>Tech Course</h3>
-            <p>Ekai Global learners receive an exclusive discount coupon to access premium Udemy courses at half the cost.</p>
-            <div class="highlight-tags">
-              <span>Web Development</span>
-              <span>Data Science</span>
-              <span>Python</span>
-              <span>Cloud Computing</span>
-            </div>
-            <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem; display:inline-block;">Claim Your Coupon</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Ready to Transform Your<br/><em>Career or Startup?</em></h2>
-        <p class="section-desc">Fill in the form below and our team will reach out within 24 hours.</p>
-      </div>
-
-      <div class="contact-layout">
-        <div class="contact-info">
-          <div class="info-card">
-            <h3>Let's Connect</h3>
-            <p>Have questions about our career programs? Want to partner for HR &amp; Operations? We're here to help.</p>
-            <div class="info-item">
-              <span class="info-icon">📧</span>
-              <div>
-                <strong>Email Us</strong>
-                <span>info@ekaiglobal.com</span>
-              </div>
-            </div>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/company/ekai-global" class="social-link" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="https://www.instagram.com/ekaiglobal" class="social-link" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-wrap">
-          <form class="lead-form" id="leadForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="role">I am a *</label>
-                <select id="role" name="role" required>
-                  <option value="">Select your role</option>
-                  <option value="student-fresher">Student / Fresher</option>
-                  <option value="professional">Working Professional</option>
-                  <option value="founder-ceo">Founder / CEO / Director</option>
-                  <option value="institution">Coaching Institute / School</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="interest">Interested In *</label>
-                <select id="interest" name="interest" required>
-                  <option value="">Select a program</option>
-                  <option value="resume-interview">Resume &amp; Interview Prep</option>
-                  <option value="career-clarity">Career Path Clarity</option>
-                  <option value="hr-ops-setup">HR &amp; Operations Setup (B2B)</option>
-                  <option value="offshore-ops">Offshore Partnering (B2B)</option>
-                  <option value="it-pathway">IT Pathway &amp; Udemy</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Message (Optional)</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about yourself or your company goals…"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              <span id="btnText">Send Enquiry</span>
-              <span id="btnLoader" class="btn-loader" style="display:none;">Sending…</span>
-            </button>
-            <div id="formSuccess" class="form-success" style="display:none;">
-              ✅ Thank you! We've received your enquiry and will reach out soon.
-            </div>
-            <div id="formError" class="form-error" style="display:none;">
-              ⚠️ Something went wrong. Please try again.
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#home" class="nav-logo footer-logo">
-            <img src="images/footer-logo.png" alt="Ekai Global" class="nav-logo-img footer-logo-img" />
+        <div class="flex flex-wrap items-center gap-4 mb-12 reveal">
+          <a class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm text-white font-semibold text-sm sm:text-base shadow-lg shadow-orange-600/25 hover:shadow-orange-600/40 hover:-translate-y-0.5 transition-all text-center" href="#services-b2c">
+            Start Your Journey
           </a>
-          <p class="footer-tagline">Empowering Careers. Scaling Businesses.<br/>Built for the future.</p>
+          <a class="px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-navy-dark font-semibold text-sm sm:text-base border border-slate-300 hover:border-slate-400 hover:-translate-y-0.5 transition-all text-center" href="#divisions">
+            Explore Solutions
+          </a>
         </div>
 
-        <div class="footer-links">
-          <div class="footer-col">
-            <h5>For Individuals</h5>
-            <a href="#services">Career Clarity</a>
-            <a href="#services">ATS Resumes</a>
-            <a href="#services">Interview Prep</a>
-            <a href="#pathway">IT Pathway</a>
+        <div class="flex flex-wrap items-center gap-8 sm:gap-12 pt-6 border-t border-slate-100 reveal">
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="500" data-suffix="+">0<span class="text-ekai-orange font-bold">+</span></div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">Professionals Guided</div>
           </div>
-          <div class="footer-col">
-            <h5>For Businesses</h5>
-            <a href="#services">HR System Setup</a>
-            <a href="#services">Payroll &amp; Compliance</a>
-            <a href="#services">Offshore Operations</a>
-            <a href="#services">Institute Tie-ups</a>
+          <div class="h-8 w-px bg-slate-200"></div>
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="95" data-suffix="%">0<span class="text-ekai-orange font-bold">%</span></div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">Interview Success</div>
           </div>
-          <div class="footer-col">
-            <h5>Company</h5>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
+          <div class="h-8 w-px bg-slate-200"></div>
+          <div class="stat-item">
+            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="15" data-suffix="+">0<span class="text-ekai-orange font-bold">+</span></div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">Startups Scaled</div>
+          </div>
+          <div class="h-8 w-px bg-slate-200 hidden sm:block"></div>
+          <div class="stat-item hidden sm:block">
+            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="98.4" data-suffix="%" data-decimal="1">0<span class="text-emerald-600 font-bold">%</span></div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">ATS Pass Rate</div>
           </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2025 Ekai Global. All rights reserved.</p>
+      <!-- Right Floating Cards -->
+      <div class="lg:col-span-5 relative w-full flex flex-col justify-center min-h-[380px] lg:min-h-[440px]">
+        <div class="relative w-full max-w-md mx-auto space-y-5">
+          <div class="p-5 rounded-2xl bg-white/95 border border-slate-100 soft-card-shadow flex items-center gap-4 transition-all hover:scale-[1.02] hover:border-orange-200 float-card-1">
+            <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-xl shrink-0">🎯</div>
+            <div>
+              <div class="text-sm font-bold text-navy-dark">Career Path Clarity</div>
+              <div class="text-xs text-slate-500">1:1 Psychometric profiling &amp; 24-month roadmap</div>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/95 border border-slate-100 soft-card-shadow flex items-center gap-4 sm:ml-12 transition-all hover:scale-[1.02] hover:border-blue-200 float-card-2">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-xl shrink-0">📄</div>
+            <div>
+              <div class="text-sm font-bold text-navy-dark">ATS Resume Built</div>
+              <div class="text-xs text-slate-500">98.4% Parser score for Fortune 500 portals</div>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/95 border border-slate-100 soft-card-shadow flex items-center gap-4 transition-all hover:scale-[1.02] hover:border-emerald-200 float-card-3">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xl shrink-0">⚙️</div>
+            <div>
+              <div class="text-sm font-bold text-navy-dark">HR Systems Deployed</div>
+              <div class="text-xs text-slate-500">Multi-jurisdiction compliant in 14 calendar days</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gradient-to-r from-orange-50/80 to-amber-50/80 border border-orange-200/70 sm:ml-6 flex items-center justify-between float-card-4">
+            <div class="flex items-center gap-2.5">
+              <span class="text-lg">🚀</span>
+              <span class="text-xs font-semibold text-slate-700">Startup Ops Pods:</span>
+            </div>
+            <span class="text-xs font-bold text-ekai-orange bg-white px-2.5 py-1 rounded-full border border-orange-200 shadow-sm">
+              Save 60% Admin Burn
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- ═══════════════ DIVISIONS ═══════════════ -->
+<section class="w-full py-20 bg-slate-50/60 border-y border-slate-100 relative" id="divisions">
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100/60 text-ekai-orange text-xs font-bold uppercase tracking-wider mb-3">
+        <span class="material-symbols-outlined text-[15px]">view_quilt</span>
+        <span>Structured Growth Vectors</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Select Your Focus Area</h2>
+      <p class="text-slate-600 text-sm sm:text-base mt-2">
+        Engineered execution for specific inflection points—from individual career breakthroughs to institutional scale.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Division 1 -->
+      <div class="rounded-2xl bg-white border border-slate-200/80 p-7 flex flex-col justify-between soft-card-shadow hover:shadow-xl hover:border-orange-300 hover:-translate-y-1 transition-all duration-300 group reveal">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-5">
+            <span class="px-2.5 py-1 rounded-md bg-orange-50 text-ekai-orange text-[11px] font-bold tracking-wide">FOR PROFESSIONALS &amp; FRESHERS</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+              <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+              +$24K Uplift
+            </span>
+          </div>
+          <span class="text-[11px] font-semibold uppercase text-slate-400 tracking-wider">Division 01 // B2C</span>
+          <h3 class="text-xl font-bold text-navy-dark mt-1">Career Services &amp; Talent Engineering</h3>
+          <p class="serif-accent text-ekai-orange text-sm font-medium mt-0.5">"Build Your Career."</p>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3.5 leading-relaxed">
+            Guaranteed ATS pass resumes (98.4%), 1:1 psychological trajectory mapping, Silicon Valley interview coaching, and certified IT upskilling.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs text-slate-400 font-medium">4 Seats Open This Sprint</span>
+          <a class="inline-flex items-center gap-1 text-xs font-bold text-ekai-orange group-hover:translate-x-1 transition-transform" href="#services-b2c">
+            <span>View Curriculum</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Division 2 -->
+      <div class="rounded-2xl bg-white border-2 border-orange-400/40 p-7 flex flex-col justify-between soft-card-shadow hover:shadow-xl hover:border-orange-500 hover:-translate-y-1 transition-all duration-300 relative group reveal">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-navy-dark text-white text-[10px] font-bold uppercase tracking-widest shadow-sm">Enterprise Engine</div>
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-5">
+            <span class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-[11px] font-bold tracking-wide">FOUNDERS &amp; EXECS (15-100)</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+              <span class="material-symbols-outlined text-[14px]">trending_down</span>
+              -60% Burn
+            </span>
+          </div>
+          <span class="text-[11px] font-semibold uppercase text-slate-400 tracking-wider">Division 02 // B2B</span>
+          <h3 class="text-xl font-bold text-navy-dark mt-1">Startup HR &amp; Operations Architecture</h3>
+          <p class="serif-accent text-ekai-orange text-sm font-medium mt-0.5">"Scale Your Business."</p>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3.5 leading-relaxed">
+            Turnkey 0-to-1 HR stacks, cross-border multi-jurisdiction compliance (US/UK/UAE/India), and plug-and-play offshore execution pods.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs text-slate-400 font-medium">14-Day Delivery SLA</span>
+          <a class="inline-flex items-center gap-1 text-xs font-bold text-ekai-orange group-hover:translate-x-1 transition-transform" href="#services-b2b">
+            <span>Explore Systems</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Division 3 -->
+      <div class="rounded-2xl bg-white border border-slate-200/80 p-7 flex flex-col justify-between soft-card-shadow hover:shadow-xl hover:border-orange-300 hover:-translate-y-1 transition-all duration-300 group reveal">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-5">
+            <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-[11px] font-bold tracking-wide">INSTITUTES &amp; BOOTCAMPS</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+              <span class="material-symbols-outlined text-[14px]">task_alt</span>
+              91% Placement
+            </span>
+          </div>
+          <span class="text-[11px] font-semibold uppercase text-slate-400 tracking-wider">Division 03 // Institutional</span>
+          <h3 class="text-xl font-bold text-navy-dark mt-1">Placement Readiness Cell (PRC)</h3>
+          <p class="serif-accent text-ekai-orange text-sm font-medium mt-0.5">"Guide. Grow. Succeed."</p>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3.5 leading-relaxed">
+            Complete outsourced placement engine for colleges and training institutes—delivering batch resume calibration, mentor panels, and campus placement drives.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs text-slate-400 font-medium">Fall &amp; Spring Batches</span>
+          <a class="inline-flex items-center gap-1 text-xs font-bold text-ekai-orange group-hover:translate-x-1 transition-transform" href="#services-prc">
+            <span>PRC Solutions</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ B2C SERVICES ═══════════════ -->
+<section class="py-20 md:py-24 bg-white relative" id="services-b2c">
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-4 pb-6 border-b border-slate-200 reveal">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-ekai-orange text-xs font-bold uppercase tracking-wider mb-2">
+          <span class="material-symbols-outlined text-[15px]">school</span>
+          <span>Division 01 // Talent Engineering (B2C)</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Build Your Career with Mathematical Precision</h2>
+        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mt-1.5">
+          Designed for 11th–12th aspirants, university freshers, and mid-career IT climbers tired of automated ATS rejection and underpaid offers.
+        </p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-semibold text-slate-800 transition-colors" href="tel:+919214953581">Call: +91 92149 53581</a>
+        <a class="px-5 py-2 rounded-xl bg-ekai-orange hover:bg-ekai-orange-light text-white text-xs font-bold shadow-md shadow-orange-500/20 hover:-translate-y-0.5 transition-all" href="#contact">Book B2C Diagnostic</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div class="p-6 sm:p-7 rounded-2xl bg-red-50/40 border border-red-100 reveal">
+        <div class="flex items-center gap-2 text-rose-700 font-bold text-sm mb-3">
+          <span class="material-symbols-outlined text-[19px]">warning</span>
+          <span>The Broken Status Quo</span>
+        </div>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+          <li class="flex items-start gap-2.5"><span class="text-rose-500 font-bold">✕</span><span>Submitting 200+ applications into ATS blackholes with zero call-backs.</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-rose-500 font-bold">✕</span><span>Uncalibrated career roadmaps based on outdated family advice.</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-rose-500 font-bold">✕</span><span>Freezing in interviews and conceding 30–50% lower compensation.</span></li>
+        </ul>
+      </div>
+      <div class="p-6 sm:p-7 rounded-2xl bg-emerald-50/50 border border-emerald-200/80 reveal">
+        <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm mb-3">
+          <span class="material-symbols-outlined text-[19px]">verified</span>
+          <span>The Ekai Acceleration Framework</span>
+        </div>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+          <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold">✓</span><span>98.4% ATS Parser score guarantee (Workday, Greenhouse, Lever).</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold">✓</span><span>Rigorous 1:1 psychological profiling and compensation playbook.</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold">✓</span><span>Direct 50% Udemy course scholarship vouchers included.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">01</div>
+          <h4 class="text-base font-bold text-navy-dark mb-2">1:1 Path Clarity &amp; Psychometrics</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Comprehensive diagnostic analyzing core aptitude and salary viability. Produces an unshakeable 24-month roadmap.</p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-ekai-orange font-semibold">Includes Trajectory Blueprint</div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">02</div>
+          <h4 class="text-base font-bold text-navy-dark mb-2">ATS Resume &amp; LinkedIn Overhaul</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Metric-driven bullet refactoring calibrated for 98.4% pass-through on Fortune 500 ATS portals.</p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-ekai-orange font-semibold">7-Day Delivery Guarantee</div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">03</div>
+          <h4 class="text-base font-bold text-navy-dark mb-2">Interview Mastery &amp; Comp Scripting</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Live mock simulations with corporate managers. Master STAR storytelling and lock higher base pay.</p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-emerald-700 font-semibold">+$24,000 Avg Offer Uplift</div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">04</div>
+          <h4 class="text-base font-bold text-navy-dark mb-2">IT Pathways &amp; 50% Udemy Access</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">IT tracks in Cloud, Full-Stack, Data Analytics & AI Ops with 50% discount Udemy vouchers.</p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-ekai-orange font-semibold">Course Sponsorship Included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ B2B SERVICES ═══════════════ -->
+<section class="py-20 md:py-24 bg-slate-50 border-y border-slate-100 relative" id="services-b2b">
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-4 pb-6 border-b border-slate-200 reveal">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
+          <span class="material-symbols-outlined text-[15px]">domain</span>
+          <span>Division 02 // Enterprise Operations (B2B)</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Scale Your Startup Without the 2 AM Payroll Panic</h2>
+        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mt-1.5">
+          Complete operational backbone for Pre-Seed through Series A Founders across US, UK, UAE &amp; India. Cut OPEX burn by up to 60%.
+        </p>
+      </div>
+      <a class="px-5 py-2.5 rounded-xl bg-navy-dark hover:bg-slate-900 text-white text-xs font-bold transition-all shadow-md flex items-center gap-1.5 hover:-translate-y-0.5" href="#contact">
+        <span class="material-symbols-outlined text-[17px] text-emerald-400">bolt</span>
+        <span>Schedule Architecture Call</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 rounded-xl bg-orange-50 text-ekai-orange flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[26px]">hub</span>
+        </div>
+        <span class="text-xs uppercase text-slate-400 tracking-widest font-bold">Pillar 01</span>
+        <h3 class="text-xl font-bold text-navy-dark mt-1 mb-3">0-to-1 HR Infrastructure</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">Architecting institutional-grade people operations so you can focus on shipping product and fundraising.</p>
+        <ul class="space-y-3 text-xs text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Custom employee handbooks &amp; remote-first policies.</span></li>
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Tiered compensation bandings &amp; ESOP modeling.</span></li>
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Seamless 5-day automated onboarding funnels.</span></li>
+        </ul>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white border-2 border-orange-400/40 soft-elevate-shadow hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 rounded-xl bg-orange-100/70 text-ekai-orange flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[26px]">gavel</span>
+        </div>
+        <span class="text-xs uppercase text-ekai-orange tracking-widest font-bold">Pillar 02</span>
+        <h3 class="text-xl font-bold text-navy-dark mt-1 mb-3">Multi-Jurisdiction Compliance</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">Mitigate costly legal liability across distributed workforces with rigorous labor law compliance.</p>
+        <ul class="space-y-3 text-xs text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Cross-border payroll for US, UK, UAE &amp; India.</span></li>
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Statutory filings (PF, ESI, W-2, 1099, VAT, GST).</span></li>
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Contractor misclassification &amp; IP protection.</span></li>
+        </ul>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:-translate-y-1 transition-all reveal">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[26px]">rocket_launch</span>
+        </div>
+        <span class="text-xs uppercase text-slate-400 tracking-widest font-bold">Pillar 03</span>
+        <h3 class="text-xl font-bold text-navy-dark mt-1 mb-3">Offshore Operations Pods</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-6">Dedicated back-office associates based in India, cutting OPEX by up to 60% without sacrificing quality.</p>
+        <ul class="space-y-3 text-xs text-slate-600">
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Pre-vetted English-proficient talent under SLA.</span></li>
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Ops pods for billing, sourcing, QA, and research.</span></li>
+          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Instant scale-up or spin-down capability.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow flex flex-col md:flex-row items-center justify-between gap-4 reveal">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+          <span class="material-symbols-outlined text-[24px]">verified_user</span>
+        </div>
+        <div>
+          <div class="font-bold text-navy-dark text-sm sm:text-base">Guaranteed 14-Calendar-Day Operational Rollout</div>
+          <div class="text-xs text-slate-500 mt-0.5">Full HR stack and hiring pipeline live in two weeks, backed by written SLA.</div>
+        </div>
+      </div>
+      <a class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm text-white text-xs font-bold shadow-md shadow-orange-500/20 hover:brightness-105 hover:-translate-y-0.5 transition-all whitespace-nowrap" href="#contact">Claim Diagnostic Slot</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRC SERVICES ═══════════════ -->
+<section class="py-20 md:py-24 bg-white relative" id="services-prc">
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-4 pb-6 border-b border-slate-200 reveal">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">
+          <span class="material-symbols-outlined text-[15px]">apartment</span>
+          <span>Division 03 // Institutional PRC</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Turnkey Placement Readiness Cell for Campuses</h2>
+        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mt-1.5">
+          For College Deans, TPOs, and EdTech Directors. Close the gap between coding theory and corporate offer letters.
+        </p>
+      </div>
+      <a class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all flex items-center gap-1.5 border border-slate-200 hover:-translate-y-0.5" href="#contact">
+        <span class="material-symbols-outlined text-[17px] text-emerald-600">handshake</span>
+        <span>Request PRC Proposal</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:-translate-y-1 transition-all soft-card-shadow reveal">
+        <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-ekai-orange flex items-center justify-center mb-5 shadow-sm">
+          <span class="material-symbols-outlined text-[22px]">groups</span>
+        </div>
+        <h4 class="text-base font-bold text-navy-dark mb-2">Batch Resume Engineering</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-4">Automated screening of 500+ student resumes. Standardizing portfolios to match enterprise hiring algorithms.</p>
+        <div class="text-xs text-emerald-700 font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check</span><span>100% Batch Standardized</span></div>
+      </div>
+
+      <div class="p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:-translate-y-1 transition-all soft-card-shadow reveal">
+        <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-ekai-orange flex items-center justify-center mb-5 shadow-sm">
+          <span class="material-symbols-outlined text-[22px]">record_voice_over</span>
+        </div>
+        <h4 class="text-base font-bold text-navy-dark mb-2">Corporate Mentor Panels</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-4">Weekly mock interviews by active leaders from Tier-1 tech firms. Direct feedback rubrics pinpoint student gaps.</p>
+        <div class="text-xs text-emerald-700 font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check</span><span>Silicon Valley &amp; Tier-1 Mentors</span></div>
+      </div>
+
+      <div class="p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:-translate-y-1 transition-all soft-card-shadow reveal">
+        <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-ekai-orange flex items-center justify-center mb-5 shadow-sm">
+          <span class="material-symbols-outlined text-[22px]">analytics</span>
+        </div>
+        <h4 class="text-base font-bold text-navy-dark mb-2">Readout Dashboards &amp; Drives</h4>
+        <p class="text-xs text-slate-600 leading-relaxed mb-4">Real-time dashboards showing candidate readiness, paired with active introductions to 50+ hiring partners.</p>
+        <div class="text-xs text-emerald-700 font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check</span><span>91% Placement Verified</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SLA MATRIX CALCULATOR ═══════════════ -->
+<section class="max-w-container-max mx-auto px-4 md:px-8 py-16 w-full" id="calculator">
+  <div class="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-10 soft-card-shadow reveal">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Selector -->
+      <div class="lg:col-span-5 flex flex-col">
+        <div class="inline-flex items-center gap-1.5 text-ekai-orange text-xs uppercase tracking-widest font-bold mb-2">
+          <span class="material-symbols-outlined text-[16px]">tune</span>
+          <span>Diagnostic SLA Matrix</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-bold text-navy-dark mb-2">Calculate Your Trajectory</h3>
+        <p class="text-slate-600 text-xs sm:text-sm mb-6">Toggle your persona below to review your exact roadmap and verified deliverables.</p>
+
+        <div class="space-y-3 mb-6">
+          <button class="calc-btn w-full text-left p-4 rounded-xl transition-all flex items-center justify-between" data-key="b2c" id="calc-btn-b2c">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-ekai-orange">
+                <span class="material-symbols-outlined text-[18px]">person</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold">Individual Professional (B2C)</div>
+                <div class="text-xs text-slate-500">Career leap, ATS pass, offer negotiation</div>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-[18px] chevron-icon">chevron_right</span>
+          </button>
+
+          <button class="calc-btn w-full text-left p-4 rounded-xl transition-all flex items-center justify-between" data-key="b2b" id="calc-btn-b2b">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-100/60 flex items-center justify-center text-blue-700">
+                <span class="material-symbols-outlined text-[18px]">domain</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold">Startup Founder &amp; CEO (B2B)</div>
+                <div class="text-xs text-slate-500">Turnkey HR stack, compliance, offshore pod</div>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-[18px] chevron-icon">chevron_right</span>
+          </button>
+
+          <button class="calc-btn w-full text-left p-4 rounded-xl transition-all flex items-center justify-between active" data-key="prc" id="calc-btn-prc">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-emerald-100/60 flex items-center justify-center text-emerald-700">
+                <span class="material-symbols-outlined text-[18px]">school</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold">College / Bootcamp Dean (PRC)</div>
+                <div class="text-xs text-slate-500">Placement Readiness Cell, mock drives</div>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-[18px] chevron-icon">chevron_right</span>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2 text-slate-500 text-xs">
+          <span class="material-symbols-outlined text-[17px] text-emerald-600">verified_user</span>
+          <span>All readouts backed by contractual SLAs &amp; NDA</span>
+        </div>
+      </div>
+
+      <!-- Output -->
+      <div class="lg:col-span-7 bg-slate-50/90 border border-slate-200/90 rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-6 gap-2">
+          <div>
+            <div class="text-xs text-slate-400 uppercase font-semibold" id="calc-label">Division 03 // Institutional PRC</div>
+            <div class="text-lg sm:text-xl font-bold text-navy-dark" id="calc-title">Outsourced Placement Readiness Cell (PRC)</div>
+          </div>
+          <div class="px-3 py-1 rounded-full font-semibold text-xs shrink-0 text-emerald-800 bg-emerald-100/80" id="calc-sla">Full Semester Integration SLA</div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6" id="calc-grid"></div>
+
+        <div class="p-4 rounded-xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="text-xs text-slate-400">Target Inflection Point:</div>
+            <div class="text-sm font-bold text-navy-dark" id="calc-summary">91% Verified Cohort Placement Within 90 Days</div>
+          </div>
+          <a class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm hover:brightness-105 text-white text-xs font-bold transition-all shadow-md shadow-orange-500/20 text-center whitespace-nowrap" href="#contact" id="calc-cta">Request Institutional Proposal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="py-20 bg-slate-50/70 border-t border-slate-200 relative" id="contact">
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">
+        <span class="material-symbols-outlined text-[15px]">contact_phone</span>
+        <span>Direct Access &amp; Consultations</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Schedule Your Strategic Diagnostic</h2>
+      <p class="text-slate-600 text-sm sm:text-base mt-2">
+        Whether accelerating your career, establishing an offshore ops pod, or elevating campus placement rates—our advisors reply within 24 business hours.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Contact Info -->
+      <div class="lg:col-span-5 space-y-6 reveal">
+        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow">
+          <h3 class="text-base font-bold text-navy-dark mb-4 flex items-center gap-2">
+            <span class="material-symbols-outlined text-ekai-orange">public</span>
+            <span>Reach Us Instantly</span>
+          </h3>
+          <div class="space-y-3">
+            <a class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 hover:bg-orange-50/40 border border-slate-100 hover:border-orange-200 transition-all group" href="tel:+919214953581">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">call</span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Direct Phone / WhatsApp</div>
+                <div class="text-sm font-bold text-navy-dark group-hover:text-ekai-orange transition-colors">+91 92149 53581</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">Mon–Sat • 9:00 AM – 8:00 PM IST</div>
+              </div>
+            </a>
+            <a class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 hover:bg-orange-50/40 border border-slate-100 hover:border-orange-200 transition-all group" href="mailto:info@ekaiglobal.com">
+              <div class="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 text-ekai-orange flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">mail</span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Official Correspondence</div>
+                <div class="text-sm font-bold text-navy-dark group-hover:text-ekai-orange transition-colors">info@ekaiglobal.com</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">Strict 24-Hour SLA Guaranteed</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow">
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Global Operating Footprint</h4>
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇺🇸 United States</div></div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇬🇧 United Kingdom</div></div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇦🇪 UAE</div></div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇮🇳 India</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 soft-card-shadow reveal">
+        <form id="leadForm" class="space-y-4" novalidate>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="interest">Select Engagement Vector *</label>
+            <select class="form-field" id="interest" name="interest" required>
+              <option value="">-- Select an option --</option>
+              <option value="Division 1: Career (B2C)">Division 1: Career Acceleration (Resume, 1:1 Coaching)</option>
+              <option value="Division 2: Startup HR (B2B)">Division 2: Startup HR, Compliance &amp; Offshore Ops</option>
+              <option value="Division 3: Institutional PRC">Division 3: Institutional PRC (College Partnership)</option>
+              <option value="General Enquiry">Other / General Enterprise Inquiry</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="name">Your Full Name *</label>
+              <input class="form-field" id="name" name="name" placeholder="e.g. Sarah Jenkins" required type="text">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="email">Official Email *</label>
+              <input class="form-field" id="email" name="email" placeholder="name@company.com" required type="email">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="phone">Phone / WhatsApp *</label>
+              <input class="form-field" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required type="tel">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="organization">Company or College</label>
+              <input class="form-field" id="organization" name="organization" placeholder="e.g. Stealth Startup or IIT" type="text">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="message">Context / Immediate Objective</label>
+            <textarea class="form-field" id="message" name="message" placeholder="Tell us about your target role, team size, current friction, or timeline..." rows="3"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button id="submitBtn" type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm hover:brightness-105 text-white font-bold text-sm shadow-md shadow-orange-500/20 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+              <span id="btnText">Submit Diagnostic Intake</span>
+              <span id="btnLoader" class="hidden">Sending...</span>
+              <span class="material-symbols-outlined text-[18px]" id="btnIcon">send</span>
+            </button>
+            <div class="text-[11px] text-slate-400 text-center mt-2 font-medium">
+              Strictly Confidential • NDA Protected • No Spam Guarantee
+            </div>
+          </div>
+
+          <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium">
+            ✅ Thank you! Your strategic diagnostic request has been received. A partner will contact you within 24 hours.
+          </div>
+          <div id="formError" class="hidden mt-4 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-sm font-medium">
+            ⚠️ Something went wrong. Please try again or email us directly at info@ekaiglobal.com
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="w-full bg-slate-50 border-t border-slate-200 pt-16 pb-12">
+  <div class="max-w-container-max mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+      <div class="lg:col-span-2">
+        <a class="inline-block mb-4" href="#hero">
+          <img alt="Ekai Global" class="h-14 w-auto object-contain" src="images/logo.png">
+        </a>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm mb-4 leading-relaxed">
+          Institutional workforce architecture, startup operational velocity, and high-impact individual trajectory engineering across four continents.
+        </p>
+        <div class="text-xs text-slate-600 space-y-1.5 mb-4">
+          <div><strong>Email:</strong> <a class="text-ekai-orange hover:underline font-medium" href="mailto:info@ekaiglobal.com">info@ekaiglobal.com</a></div>
+          <div><strong>Phone:</strong> <a class="text-slate-800 hover:text-ekai-orange hover:underline font-medium" href="tel:+919214953581">+91 92149 53581</a></div>
+          <div><strong>Footprint:</strong> US • UK • UAE • India</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-sm font-bold text-navy-dark mb-3">Division 1: Career</div>
+        <ul class="space-y-2 text-xs text-slate-500">
+          <li><a class="footer-link" href="#services-b2c">1:1 Path Clarity</a></li>
+          <li><a class="footer-link" href="#services-b2c">ATS Resume (98.4%)</a></li>
+          <li><a class="footer-link" href="#services-b2c">LinkedIn Engineering</a></li>
+          <li><a class="footer-link" href="#services-b2c">Mock Interview Script</a></li>
+          <li><a class="footer-link" href="#services-b2c">IT Pathways + Udemy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-sm font-bold text-navy-dark mb-3">Division 2: HR &amp; Ops</div>
+        <ul class="space-y-2 text-xs text-slate-500">
+          <li><a class="footer-link" href="#services-b2b">0-to-1 HR Infrastructure</a></li>
+          <li><a class="footer-link" href="#services-b2b">Multi-Jurisdiction Compliance</a></li>
+          <li><a class="footer-link" href="#services-b2b">India Offshore Pods</a></li>
+          <li><a class="footer-link" href="#services-b2b">Compensation &amp; ESOP</a></li>
+          <li><a class="footer-link" href="#services-b2b">14-Day Delivery SLA</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-sm font-bold text-navy-dark mb-3">Division 3: PRC</div>
+        <ul class="space-y-2 text-xs text-slate-500">
+          <li><a class="footer-link" href="#services-prc">Turnkey PRC Outsourcing</a></li>
+          <li><a class="footer-link" href="#services-prc">Batch Resume Standard</a></li>
+          <li><a class="footer-link" href="#services-prc">Corporate Mentor Panels</a></li>
+          <li><a class="footer-link" href="#services-prc">Outcome Readouts</a></li>
+          <li><a class="footer-link" href="#contact">Request PRC Proposal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-200 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>© 2025 Ekai Global Inc. All rights reserved. Operating across US, UK, UAE, and India.</div>
+      <a class="hover:text-slate-900 transition-colors flex items-center gap-1 font-medium text-slate-700" href="#hero">
+        <span>Back to top</span>
+        <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
