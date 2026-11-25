@@ -3,738 +3,269 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Ekai Global | Build Your Career. Scale Your Business.</title>
-<meta name="description" content="Ekai Global bridges the gap between potential and execution. Career acceleration for professionals & turnkey HR/Operations for startups across US, UK, UAE & India.">
-
+<title>Ekai Global | HR and Operations for Startups</title>
+<meta name="description" content="Ekai Global provides HR and operations support for startups and new businesses: policies, hiring, onboarding and back-office work. We also offer career guidance and college placement programs.">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          "navy-dark": "#0B1528",
-          "navy-slate": "#1E293B",
-          "ekai-orange": "#e65100",
-          "ekai-orange-light": "#ea580c",
-          "ekai-warm": "#f97316",
-          "ekai-amber": "#d97706",
-          "ekai-green": "#10b981",
-          "surface-pure": "#ffffff",
-          "surface-cream": "#fffcf9",
-          "surface-subtle": "#f8fafc",
-          "border-light": "#f1f5f9",
-          "border-medium": "#e2e8f0"
-        },
-        fontFamily: {
-          sans: ["Plus Jakarta Sans", "sans-serif"],
-          serif: ["Newsreader", "Georgia", "serif"]
-        },
-        spacing: {
-          "container-max": "1280px"
-        }
-      }
-    }
-  };
+  tailwind.config = { theme: { extend: {
+    colors: { "navy-dark": "#0B1528", "ekai-orange": "#e65100", "ekai-orange-light": "#ea580c", "ekai-warm": "#f97316" },
+    fontFamily: { sans: ["Plus Jakarta Sans", "sans-serif"], serif: ["Newsreader", "Georgia", "serif"] },
+    spacing: { "container-max": "1200px" }
+  } } };
 </script>
-
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="font-sans text-slate-800 antialiased selection:bg-orange-100 selection:text-ekai-orange bg-white">
+<div id="progress"></div>
 
-<!-- ═══════════════ TOP UTILITY BAR ═══════════════ -->
-<aside class="w-full bg-slate-50 border-b border-border-medium/70 text-xs text-slate-600">
-  <div class="max-w-container-max mx-auto px-4 md:px-8 py-1.5 flex flex-wrap items-center justify-between gap-2">
-    <div class="flex items-center gap-2 sm:gap-3">
-      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[10px] border border-emerald-200">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-        Global Footprint
-      </span>
-      <span class="text-slate-500 hidden sm:inline text-[11px]">United States • United Kingdom • UAE • India</span>
-    </div>
-    <div class="flex items-center gap-4 text-[11px]">
-      <a class="hover:text-ekai-orange flex items-center gap-1 transition-colors text-slate-600" href="mailto:info@ekaiglobal.com">
-        <span class="material-symbols-outlined text-[14px] text-ekai-orange">mail</span>
-        <span>info@ekaiglobal.com</span>
-      </a>
-      <span class="text-slate-300">|</span>
-      <a class="hover:text-ekai-orange flex items-center gap-1 font-semibold text-slate-800 transition-colors" href="tel:+919214953581">
-        <span class="material-symbols-outlined text-[14px] text-emerald-600">call</span>
-        <span>+91 92149 53581</span>
-      </a>
-    </div>
-  </div>
-</aside>
-
-<!-- ═══════════════ MAIN NAVIGATION ═══════════════ -->
-<header id="mainNav" class="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
-  <div class="h-20 sm:h-24 max-w-container-max mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
-    
-    <!-- Logo -->
+<header id="mainNav" class="sticky top-0 w-full z-40 border-b transition-all duration-300">
+  <div class="h-20 max-w-container-max mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
     <a aria-label="Ekai Global Home" class="flex items-center shrink-0" href="#hero">
-      <img alt="Ekai Global" src="images/logo.png" class="nav-logo-img">
+      <img alt="Ekai Global" src="images/logonew.png" class="nav-logo-img">
     </a>
-
-    <!-- Desktop Nav Links -->
-    <nav class="hidden lg:flex items-center gap-1 text-[13.5px] font-medium text-slate-600">
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#hero">Home</a>
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#divisions">Divisions</a>
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-ekai-orange hover:bg-orange-50/50 transition-colors" href="#services-b2c">Career (B2C)</a>
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#services-b2b">Startup HR (B2B)</a>
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#services-prc">Institutes (PRC)</a>
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#calculator">SLA Matrix</a>
-      <a class="nav-item px-3 py-1.5 rounded-lg hover:text-slate-950 hover:bg-slate-50 transition-colors" href="#contact">Contact</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-600">
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:bg-slate-50" href="#services">HR &amp; Operations</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:bg-slate-50" href="#other">Careers &amp; Colleges</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:bg-slate-50" href="#process">How it works</a>
+      <a class="nav-item px-3 py-1.5 rounded-lg hover:bg-slate-50" href="#contact">Contact</a>
     </nav>
-
-    <!-- Right CTA -->
     <div class="flex items-center gap-3">
-      <a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-all border border-slate-200" href="tel:+919214953581">
-        <span class="material-symbols-outlined text-[15px] text-emerald-600">phone_in_talk</span>
-        <span>+91 92149 53581</span>
-      </a>
-      <a class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm hover:brightness-105 text-white text-xs md:text-sm font-semibold shadow-md shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-1.5 whitespace-nowrap" href="#contact">
-        <span>Get Started</span>
-        <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
-      </a>
-      <!-- Mobile Hamburger -->
-      <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Open menu">
-        <span class="material-symbols-outlined text-navy-dark">menu</span>
+      <a class="btn-shine btn-lift px-5 py-2.5 rounded-xl bg-ekai-orange hover:bg-ekai-orange-light text-white text-sm font-semibold whitespace-nowrap" href="#contact">Get in touch</a>
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
   </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white">
-    <div class="px-4 py-3 space-y-1">
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#hero">Home</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#divisions">Divisions</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-ekai-orange hover:bg-orange-50" href="#services-b2c">Career (B2C)</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#services-b2b">Startup HR (B2B)</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#services-prc">Institutes (PRC)</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#calculator">SLA Matrix</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50" href="#contact">Contact</a>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white">
+    <div class="px-4 py-3 space-y-1 text-sm font-medium text-slate-700">
+      <a class="block px-3 py-2 rounded-lg hover:bg-slate-50" href="#services">HR &amp; Operations</a>
+      <a class="block px-3 py-2 rounded-lg hover:bg-slate-50" href="#other">Careers &amp; Colleges</a>
+      <a class="block px-3 py-2 rounded-lg hover:bg-slate-50" href="#process">How it works</a>
+      <a class="block px-3 py-2 rounded-lg hover:bg-slate-50" href="#contact">Contact</a>
     </div>
   </div>
 </header>
 
 <main class="w-full overflow-x-hidden">
 
-<!-- ═══════════════ HERO SECTION ═══════════════ -->
-<section class="relative pt-12 md:pt-20 pb-20 md:pb-28 bg-gradient-to-b from-orange-50/30 via-white to-white overflow-hidden" id="hero">
-  <div class="absolute top-10 left-1/4 -translate-x-1/2 w-[550px] h-[550px] bg-orange-100/40 rounded-full blur-[140px] pointer-events-none -z-10 animate-blob"></div>
-  <div class="absolute top-20 right-10 w-[450px] h-[450px] bg-blue-50/60 rounded-full blur-[120px] pointer-events-none -z-10 animate-blob animation-delay-2000"></div>
-
-  <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-      
-      <!-- Left Content -->
-      <div class="lg:col-span-7 flex flex-col items-start">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-100/80 mb-6 text-xs font-semibold text-slate-700 shadow-sm reveal">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Career Services | HR &amp; Operations</span>
-        </div>
-
-        <h1 class="text-4xl sm:text-6xl xl:text-[68px] font-bold text-navy-dark tracking-tight leading-[1.1] mb-6 reveal">
-          Build Your<br>
-          Career.<br>
-          <span class="serif-accent font-normal text-ekai-orange tracking-normal italic">Scale Your Business.</span>
-        </h1>
-
-        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8 reveal">
-          Ekai Global bridges the gap between potential and execution. We empower professionals to accelerate their careers, and partner with founders to build robust HR &amp; operational systems from scratch.
-        </p>
-
-        <div class="flex flex-wrap items-center gap-4 mb-12 reveal">
-          <a class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm text-white font-semibold text-sm sm:text-base shadow-lg shadow-orange-600/25 hover:shadow-orange-600/40 hover:-translate-y-0.5 transition-all text-center" href="#services-b2c">
-            Start Your Journey
-          </a>
-          <a class="px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-navy-dark font-semibold text-sm sm:text-base border border-slate-300 hover:border-slate-400 hover:-translate-y-0.5 transition-all text-center" href="#divisions">
-            Explore Solutions
-          </a>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-8 sm:gap-12 pt-6 border-t border-slate-100 reveal">
-          <div class="stat-item">
-            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="500" data-suffix="+">0<span class="text-ekai-orange font-bold">+</span></div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">Professionals Guided</div>
-          </div>
-          <div class="h-8 w-px bg-slate-200"></div>
-          <div class="stat-item">
-            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="95" data-suffix="%">0<span class="text-ekai-orange font-bold">%</span></div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">Interview Success</div>
-          </div>
-          <div class="h-8 w-px bg-slate-200"></div>
-          <div class="stat-item">
-            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="15" data-suffix="+">0<span class="text-ekai-orange font-bold">+</span></div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">Startups Scaled</div>
-          </div>
-          <div class="h-8 w-px bg-slate-200 hidden sm:block"></div>
-          <div class="stat-item hidden sm:block">
-            <div class="text-3xl sm:text-4xl font-extrabold text-navy-dark tracking-tight" data-count="98.4" data-suffix="%" data-decimal="1">0<span class="text-emerald-600 font-bold">%</span></div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">ATS Pass Rate</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Floating Cards -->
-      <div class="lg:col-span-5 relative w-full flex flex-col justify-center min-h-[380px] lg:min-h-[440px]">
-        <div class="relative w-full max-w-md mx-auto space-y-5">
-          <div class="p-5 rounded-2xl bg-white/95 border border-slate-100 soft-card-shadow flex items-center gap-4 transition-all hover:scale-[1.02] hover:border-orange-200 float-card-1">
-            <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-xl shrink-0">🎯</div>
-            <div>
-              <div class="text-sm font-bold text-navy-dark">Career Path Clarity</div>
-              <div class="text-xs text-slate-500">1:1 Psychometric profiling &amp; 24-month roadmap</div>
-            </div>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/95 border border-slate-100 soft-card-shadow flex items-center gap-4 sm:ml-12 transition-all hover:scale-[1.02] hover:border-blue-200 float-card-2">
-            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-xl shrink-0">📄</div>
-            <div>
-              <div class="text-sm font-bold text-navy-dark">ATS Resume Built</div>
-              <div class="text-xs text-slate-500">98.4% Parser score for Fortune 500 portals</div>
-            </div>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/95 border border-slate-100 soft-card-shadow flex items-center gap-4 transition-all hover:scale-[1.02] hover:border-emerald-200 float-card-3">
-            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xl shrink-0">⚙️</div>
-            <div>
-              <div class="text-sm font-bold text-navy-dark">HR Systems Deployed</div>
-              <div class="text-xs text-slate-500">Multi-jurisdiction compliant in 14 calendar days</div>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-gradient-to-r from-orange-50/80 to-amber-50/80 border border-orange-200/70 sm:ml-6 flex items-center justify-between float-card-4">
-            <div class="flex items-center gap-2.5">
-              <span class="text-lg">🚀</span>
-              <span class="text-xs font-semibold text-slate-700">Startup Ops Pods:</span>
-            </div>
-            <span class="text-xs font-bold text-ekai-orange bg-white px-2.5 py-1 rounded-full border border-orange-200 shadow-sm">
-              Save 60% Admin Burn
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ DIVISIONS ═══════════════ -->
-<section class="w-full py-20 bg-slate-50/60 border-y border-slate-100 relative" id="divisions">
-  <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100/60 text-ekai-orange text-xs font-bold uppercase tracking-wider mb-3">
-        <span class="material-symbols-outlined text-[15px]">view_quilt</span>
-        <span>Structured Growth Vectors</span>
-      </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Select Your Focus Area</h2>
-      <p class="text-slate-600 text-sm sm:text-base mt-2">
-        Engineered execution for specific inflection points—from individual career breakthroughs to institutional scale.
+<section class="relative overflow-hidden pt-14 pb-20 md:pt-24 md:pb-28" id="hero">
+  
+  <div class="max-w-container-max mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-7">
+      <h1 class="text-4xl sm:text-6xl font-bold text-navy-dark tracking-tight leading-[1.1] mb-6">
+        <span class="line"><span>HR and operations</span></span>
+        <span class="line"><span>for startups and</span></span>
+        <span class="line"><span><em class="grad-text not-italic">new businesses.</em></span></span>
+      </h1>
+      <p class="hero-in text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8" style="animation-delay:.6s">
+        We set up and handle your people and back-office work, so you can spend your time on your product and your customers.
       </p>
+      <div class="hero-in flex flex-wrap gap-4" style="animation-delay:.75s">
+        <a class="btn-shine btn-lift px-7 py-3.5 rounded-xl bg-ekai-orange hover:bg-ekai-orange-light text-white font-semibold" href="#contact">Talk to us</a>
+        <a class="btn-lift px-7 py-3.5 rounded-xl bg-white text-navy-dark font-semibold border border-slate-300 hover:border-ekai-orange hover:text-ekai-orange" href="#services">See what we do</a>
+      </div>
     </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- Division 1 -->
-      <div class="rounded-2xl bg-white border border-slate-200/80 p-7 flex flex-col justify-between soft-card-shadow hover:shadow-xl hover:border-orange-300 hover:-translate-y-1 transition-all duration-300 group reveal">
-        <div>
-          <div class="flex items-center justify-between gap-2 mb-5">
-            <span class="px-2.5 py-1 rounded-md bg-orange-50 text-ekai-orange text-[11px] font-bold tracking-wide">FOR PROFESSIONALS &amp; FRESHERS</span>
-            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
-              <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
-              +$24K Uplift
-            </span>
-          </div>
-          <span class="text-[11px] font-semibold uppercase text-slate-400 tracking-wider">Division 01 // B2C</span>
-          <h3 class="text-xl font-bold text-navy-dark mt-1">Career Services &amp; Talent Engineering</h3>
-          <p class="serif-accent text-ekai-orange text-sm font-medium mt-0.5">"Build Your Career."</p>
-          <p class="text-slate-600 text-xs sm:text-sm mt-3.5 leading-relaxed">
-            Guaranteed ATS pass resumes (98.4%), 1:1 psychological trajectory mapping, Silicon Valley interview coaching, and certified IT upskilling.
-          </p>
+    <div class="hero-in lg:col-span-5 relative w-full max-w-md mx-auto" style="animation-delay:.5s">
+      <div class="setup-card glass rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="font-bold text-navy-dark">New business setup</div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700"><span class="pulse-dot w-2 h-2 rounded-full bg-emerald-500"></span>In progress</span>
         </div>
-        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
-          <span class="text-xs text-slate-400 font-medium">4 Seats Open This Sprint</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-ekai-orange group-hover:translate-x-1 transition-transform" href="#services-b2c">
-            <span>View Curriculum</span>
-            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
-        </div>
+        <div class="h-2 rounded-full bg-slate-100 mb-5 overflow-hidden"><div class="setup-bar"></div></div>
+        <ul class="space-y-3.5">
+          <li class="setup-item flex items-center gap-3" style="--i:0">
+            <span class="tick" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+            <span class="label text-sm font-semibold" style="--i:0">HR policies drafted</span>
+          </li>
+          <li class="setup-item flex items-center gap-3" style="--i:1">
+            <span class="tick" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+            <span class="label text-sm font-semibold" style="--i:1">Job descriptions ready</span>
+          </li>
+          <li class="setup-item flex items-center gap-3" style="--i:2">
+            <span class="tick" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+            <span class="label text-sm font-semibold" style="--i:2">Offer letters prepared</span>
+          </li>
+          <li class="setup-item flex items-center gap-3" style="--i:3">
+            <span class="tick" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+            <span class="label text-sm font-semibold" style="--i:3">Onboarding process set</span>
+          </li>
+          <li class="setup-item flex items-center gap-3" style="--i:4">
+            <span class="tick" style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+            <span class="label text-sm font-semibold" style="--i:4">Employee records organised</span>
+          </li>
+        </ul>
       </div>
-
-      <!-- Division 2 -->
-      <div class="rounded-2xl bg-white border-2 border-orange-400/40 p-7 flex flex-col justify-between soft-card-shadow hover:shadow-xl hover:border-orange-500 hover:-translate-y-1 transition-all duration-300 relative group reveal">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-navy-dark text-white text-[10px] font-bold uppercase tracking-widest shadow-sm">Enterprise Engine</div>
-        <div>
-          <div class="flex items-center justify-between gap-2 mb-5">
-            <span class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-[11px] font-bold tracking-wide">FOUNDERS &amp; EXECS (15-100)</span>
-            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
-              <span class="material-symbols-outlined text-[14px]">trending_down</span>
-              -60% Burn
-            </span>
-          </div>
-          <span class="text-[11px] font-semibold uppercase text-slate-400 tracking-wider">Division 02 // B2B</span>
-          <h3 class="text-xl font-bold text-navy-dark mt-1">Startup HR &amp; Operations Architecture</h3>
-          <p class="serif-accent text-ekai-orange text-sm font-medium mt-0.5">"Scale Your Business."</p>
-          <p class="text-slate-600 text-xs sm:text-sm mt-3.5 leading-relaxed">
-            Turnkey 0-to-1 HR stacks, cross-border multi-jurisdiction compliance (US/UK/UAE/India), and plug-and-play offshore execution pods.
-          </p>
-        </div>
-        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
-          <span class="text-xs text-slate-400 font-medium">14-Day Delivery SLA</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-ekai-orange group-hover:translate-x-1 transition-transform" href="#services-b2b">
-            <span>Explore Systems</span>
-            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Division 3 -->
-      <div class="rounded-2xl bg-white border border-slate-200/80 p-7 flex flex-col justify-between soft-card-shadow hover:shadow-xl hover:border-orange-300 hover:-translate-y-1 transition-all duration-300 group reveal">
-        <div>
-          <div class="flex items-center justify-between gap-2 mb-5">
-            <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-[11px] font-bold tracking-wide">INSTITUTES &amp; BOOTCAMPS</span>
-            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
-              <span class="material-symbols-outlined text-[14px]">task_alt</span>
-              91% Placement
-            </span>
-          </div>
-          <span class="text-[11px] font-semibold uppercase text-slate-400 tracking-wider">Division 03 // Institutional</span>
-          <h3 class="text-xl font-bold text-navy-dark mt-1">Placement Readiness Cell (PRC)</h3>
-          <p class="serif-accent text-ekai-orange text-sm font-medium mt-0.5">"Guide. Grow. Succeed."</p>
-          <p class="text-slate-600 text-xs sm:text-sm mt-3.5 leading-relaxed">
-            Complete outsourced placement engine for colleges and training institutes—delivering batch resume calibration, mentor panels, and campus placement drives.
-          </p>
-        </div>
-        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
-          <span class="text-xs text-slate-400 font-medium">Fall &amp; Spring Batches</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-ekai-orange group-hover:translate-x-1 transition-transform" href="#services-prc">
-            <span>PRC Solutions</span>
-            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
-        </div>
+      <div class="float-chip hidden sm:flex absolute -bottom-6 -left-6 items-center gap-2.5 px-4 py-2.5 rounded-xl glass-dark text-white text-xs font-semibold">
+        <span class="text-base">👋</span> New joiner, ready for day one
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ B2C SERVICES ═══════════════ -->
-<section class="py-20 md:py-24 bg-white relative" id="services-b2c">
+<div class="glass text-navy-dark/80 py-4 overflow-hidden" aria-hidden="true">
+  <div class="marquee">
+    <div class="marquee-track"><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">HR policies<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Hiring<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Offer letters<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Onboarding<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Employee records<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Back-office support<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Career guidance<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Placement readiness<span class="text-ekai-warm">✦</span></span></div>
+    <div class="marquee-track"><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">HR policies<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Hiring<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Offer letters<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Onboarding<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Employee records<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Back-office support<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Career guidance<span class="text-ekai-warm">✦</span></span><span class="text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-10">Placement readiness<span class="text-ekai-warm">✦</span></span></div>
+  </div>
+</div>
+
+<section class="py-20" id="services">
   <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-4 pb-6 border-b border-slate-200 reveal">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-ekai-orange text-xs font-bold uppercase tracking-wider mb-2">
-          <span class="material-symbols-outlined text-[15px]">school</span>
-          <span>Division 01 // Talent Engineering (B2C)</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Build Your Career with Mathematical Precision</h2>
-        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mt-1.5">
-          Designed for 11th–12th aspirants, university freshers, and mid-career IT climbers tired of automated ATS rejection and underpaid offers.
-        </p>
-      </div>
-      <div class="flex items-center gap-3">
-        <a class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-semibold text-slate-800 transition-colors" href="tel:+919214953581">Call: +91 92149 53581</a>
-        <a class="px-5 py-2 rounded-xl bg-ekai-orange hover:bg-ekai-orange-light text-white text-xs font-bold shadow-md shadow-orange-500/20 hover:-translate-y-0.5 transition-all" href="#contact">Book B2C Diagnostic</a>
-      </div>
+    <div class="max-w-2xl mb-12 reveal">
+      <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">HR and operations support</h2>
+      <p class="text-slate-600 mt-2">For founders and small teams who need a working HR and operations setup, without building a full department first.</p>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-      <div class="p-6 sm:p-7 rounded-2xl bg-red-50/40 border border-red-100 reveal">
-        <div class="flex items-center gap-2 text-rose-700 font-bold text-sm mb-3">
-          <span class="material-symbols-outlined text-[19px]">warning</span>
-          <span>The Broken Status Quo</span>
-        </div>
-        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-          <li class="flex items-start gap-2.5"><span class="text-rose-500 font-bold">✕</span><span>Submitting 200+ applications into ATS blackholes with zero call-backs.</span></li>
-          <li class="flex items-start gap-2.5"><span class="text-rose-500 font-bold">✕</span><span>Uncalibrated career roadmaps based on outdated family advice.</span></li>
-          <li class="flex items-start gap-2.5"><span class="text-rose-500 font-bold">✕</span><span>Freezing in interviews and conceding 30–50% lower compensation.</span></li>
-        </ul>
-      </div>
-      <div class="p-6 sm:p-7 rounded-2xl bg-emerald-50/50 border border-emerald-200/80 reveal">
-        <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm mb-3">
-          <span class="material-symbols-outlined text-[19px]">verified</span>
-          <span>The Ekai Acceleration Framework</span>
-        </div>
-        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-          <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold">✓</span><span>98.4% ATS Parser score guarantee (Workday, Greenhouse, Lever).</span></li>
-          <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold">✓</span><span>Rigorous 1:1 psychological profiling and compensation playbook.</span></li>
-          <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold">✓</span><span>Direct 50% Udemy course scholarship vouchers included.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
-        <div>
-          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">01</div>
-          <h4 class="text-base font-bold text-navy-dark mb-2">1:1 Path Clarity &amp; Psychometrics</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Comprehensive diagnostic analyzing core aptitude and salary viability. Produces an unshakeable 24-month roadmap.</p>
-        </div>
-        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-ekai-orange font-semibold">Includes Trajectory Blueprint</div>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
-        <div>
-          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">02</div>
-          <h4 class="text-base font-bold text-navy-dark mb-2">ATS Resume &amp; LinkedIn Overhaul</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Metric-driven bullet refactoring calibrated for 98.4% pass-through on Fortune 500 ATS portals.</p>
-        </div>
-        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-ekai-orange font-semibold">7-Day Delivery Guarantee</div>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
-        <div>
-          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">03</div>
-          <h4 class="text-base font-bold text-navy-dark mb-2">Interview Mastery &amp; Comp Scripting</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">Live mock simulations with corporate managers. Master STAR storytelling and lock higher base pay.</p>
-        </div>
-        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-emerald-700 font-semibold">+$24,000 Avg Offer Uplift</div>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:border-orange-300 hover:-translate-y-1 transition-all flex flex-col justify-between reveal">
-        <div>
-          <div class="w-10 h-10 rounded-xl bg-orange-100 text-ekai-orange flex items-center justify-center mb-4 font-bold text-sm">04</div>
-          <h4 class="text-base font-bold text-navy-dark mb-2">IT Pathways &amp; 50% Udemy Access</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">IT tracks in Cloud, Full-Stack, Data Analytics & AI Ops with 50% discount Udemy vouchers.</p>
-        </div>
-        <div class="mt-5 pt-3 border-t border-slate-100 text-[11px] text-ekai-orange font-semibold">Course Sponsorship Included</div>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="spot glass p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow reveal">
+        <div class="icon-tile w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl mb-5">📋</div>
+        <h3 class="text-lg font-bold text-navy-dark mb-2">HR policies and handbook</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Clear company policies and an employee handbook written for your team and your way of working.</p>
+      </article>
+      <article class="spot glass p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow reveal">
+        <div class="icon-tile w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🤝</div>
+        <h3 class="text-lg font-bold text-navy-dark mb-2">Hiring and recruitment</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Job descriptions, sourcing, screening and interview process, so you hire the right people faster.</p>
+      </article>
+      <article class="spot glass p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow reveal">
+        <div class="icon-tile w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl mb-5">📝</div>
+        <h3 class="text-lg font-bold text-navy-dark mb-2">Offer letters and HR documents</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Offer letters, employment agreements and standard templates, ready to use from day one.</p>
+      </article>
+      <article class="spot glass p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow reveal">
+        <div class="icon-tile w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🚀</div>
+        <h3 class="text-lg font-bold text-navy-dark mb-2">Onboarding and employee records</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">A simple onboarding process for new joiners, and organised records for every employee.</p>
+      </article>
+      <article class="spot glass p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow reveal">
+        <div class="icon-tile w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🗓️</div>
+        <h3 class="text-lg font-bold text-navy-dark mb-2">Day-to-day HR processes</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Leave, attendance, performance reviews and other routine HR work set up and running smoothly.</p>
+      </article>
+      <article class="spot glass p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow reveal">
+        <div class="icon-tile w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🧩</div>
+        <h3 class="text-lg font-bold text-navy-dark mb-2">Back-office and admin support</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Help with admin tasks, documentation and processes so your operations stay organised as you grow.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ B2B SERVICES ═══════════════ -->
-<section class="py-20 md:py-24 bg-slate-50 border-y border-slate-100 relative" id="services-b2b">
+<section class="py-20" id="other">
   <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-4 pb-6 border-b border-slate-200 reveal">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
-          <span class="material-symbols-outlined text-[15px]">domain</span>
-          <span>Division 02 // Enterprise Operations (B2B)</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Scale Your Startup Without the 2 AM Payroll Panic</h2>
-        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mt-1.5">
-          Complete operational backbone for Pre-Seed through Series A Founders across US, UK, UAE &amp; India. Cut OPEX burn by up to 60%.
-        </p>
-      </div>
-      <a class="px-5 py-2.5 rounded-xl bg-navy-dark hover:bg-slate-900 text-white text-xs font-bold transition-all shadow-md flex items-center gap-1.5 hover:-translate-y-0.5" href="#contact">
-        <span class="material-symbols-outlined text-[17px] text-emerald-400">bolt</span>
-        <span>Schedule Architecture Call</span>
-      </a>
+    <div class="max-w-2xl mb-10 reveal">
+      <h2 class="text-2xl sm:text-3xl font-bold text-navy-dark tracking-tight">We also help with careers and placements</h2>
     </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-      <div class="p-8 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:-translate-y-1 transition-all reveal">
-        <div class="w-12 h-12 rounded-xl bg-orange-50 text-ekai-orange flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-[26px]">hub</span>
-        </div>
-        <span class="text-xs uppercase text-slate-400 tracking-widest font-bold">Pillar 01</span>
-        <h3 class="text-xl font-bold text-navy-dark mt-1 mb-3">0-to-1 HR Infrastructure</h3>
-        <p class="text-sm text-slate-600 leading-relaxed mb-6">Architecting institutional-grade people operations so you can focus on shipping product and fundraising.</p>
-        <ul class="space-y-3 text-xs text-slate-600">
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Custom employee handbooks &amp; remote-first policies.</span></li>
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Tiered compensation bandings &amp; ESOP modeling.</span></li>
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Seamless 5-day automated onboarding funnels.</span></li>
-        </ul>
-      </div>
-
-      <div class="p-8 rounded-2xl bg-white border-2 border-orange-400/40 soft-elevate-shadow hover:-translate-y-1 transition-all reveal">
-        <div class="w-12 h-12 rounded-xl bg-orange-100/70 text-ekai-orange flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-[26px]">gavel</span>
-        </div>
-        <span class="text-xs uppercase text-ekai-orange tracking-widest font-bold">Pillar 02</span>
-        <h3 class="text-xl font-bold text-navy-dark mt-1 mb-3">Multi-Jurisdiction Compliance</h3>
-        <p class="text-sm text-slate-600 leading-relaxed mb-6">Mitigate costly legal liability across distributed workforces with rigorous labor law compliance.</p>
-        <ul class="space-y-3 text-xs text-slate-600">
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Cross-border payroll for US, UK, UAE &amp; India.</span></li>
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Statutory filings (PF, ESI, W-2, 1099, VAT, GST).</span></li>
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Contractor misclassification &amp; IP protection.</span></li>
-        </ul>
-      </div>
-
-      <div class="p-8 rounded-2xl bg-white border border-slate-200 soft-card-shadow hover:-translate-y-1 transition-all reveal">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-[26px]">rocket_launch</span>
-        </div>
-        <span class="text-xs uppercase text-slate-400 tracking-widest font-bold">Pillar 03</span>
-        <h3 class="text-xl font-bold text-navy-dark mt-1 mb-3">Offshore Operations Pods</h3>
-        <p class="text-sm text-slate-600 leading-relaxed mb-6">Dedicated back-office associates based in India, cutting OPEX by up to 60% without sacrificing quality.</p>
-        <ul class="space-y-3 text-xs text-slate-600">
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Pre-vetted English-proficient talent under SLA.</span></li>
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Ops pods for billing, sourcing, QA, and research.</span></li>
-          <li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-emerald-600 text-[16px] mt-0.5">check_circle</span><span>Instant scale-up or spin-down capability.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow flex flex-col md:flex-row items-center justify-between gap-4 reveal">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
-          <span class="material-symbols-outlined text-[24px]">verified_user</span>
-        </div>
-        <div>
-          <div class="font-bold text-navy-dark text-sm sm:text-base">Guaranteed 14-Calendar-Day Operational Rollout</div>
-          <div class="text-xs text-slate-500 mt-0.5">Full HR stack and hiring pipeline live in two weeks, backed by written SLA.</div>
-        </div>
-      </div>
-      <a class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm text-white text-xs font-bold shadow-md shadow-orange-500/20 hover:brightness-105 hover:-translate-y-0.5 transition-all whitespace-nowrap" href="#contact">Claim Diagnostic Slot</a>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <article class="spot glass p-6 rounded-2xl border border-slate-200 bg-white reveal">
+        <div class="icon-tile w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center text-xl mb-4">🎯</div>
+        <h3 class="font-bold text-navy-dark mb-1">Career guidance</h3>
+        <p class="text-sm text-slate-600">For students and professionals: career counselling, resume and LinkedIn review, and mock interviews.</p>
+      </article>
+      <article class="spot glass p-6 rounded-2xl border border-slate-200 bg-white reveal">
+        <div class="icon-tile w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center text-xl mb-4">🎓</div>
+        <h3 class="font-bold text-navy-dark mb-1">Placement readiness for colleges</h3>
+        <p class="text-sm text-slate-600">For colleges and institutes: resume workshops, mock interviews and placement preparation for student batches.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ PRC SERVICES ═══════════════ -->
-<section class="py-20 md:py-24 bg-white relative" id="services-prc">
+<section class="py-20" id="process">
   <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-4 pb-6 border-b border-slate-200 reveal">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">
-          <span class="material-symbols-outlined text-[15px]">apartment</span>
-          <span>Division 03 // Institutional PRC</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Turnkey Placement Readiness Cell for Campuses</h2>
-        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mt-1.5">
-          For College Deans, TPOs, and EdTech Directors. Close the gap between coding theory and corporate offer letters.
-        </p>
-      </div>
-      <a class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all flex items-center gap-1.5 border border-slate-200 hover:-translate-y-0.5" href="#contact">
-        <span class="material-symbols-outlined text-[17px] text-emerald-600">handshake</span>
-        <span>Request PRC Proposal</span>
-      </a>
+    <div class="glass-dark text-white rounded-3xl p-8 md:p-12">
+    <div class="max-w-2xl mb-14 reveal">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">How it works</h2>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:-translate-y-1 transition-all soft-card-shadow reveal">
-        <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-ekai-orange flex items-center justify-center mb-5 shadow-sm">
-          <span class="material-symbols-outlined text-[22px]">groups</span>
-        </div>
-        <h4 class="text-base font-bold text-navy-dark mb-2">Batch Resume Engineering</h4>
-        <p class="text-xs text-slate-600 leading-relaxed mb-4">Automated screening of 500+ student resumes. Standardizing portfolios to match enterprise hiring algorithms.</p>
-        <div class="text-xs text-emerald-700 font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check</span><span>100% Batch Standardized</span></div>
-      </div>
-
-      <div class="p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:-translate-y-1 transition-all soft-card-shadow reveal">
-        <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-ekai-orange flex items-center justify-center mb-5 shadow-sm">
-          <span class="material-symbols-outlined text-[22px]">record_voice_over</span>
-        </div>
-        <h4 class="text-base font-bold text-navy-dark mb-2">Corporate Mentor Panels</h4>
-        <p class="text-xs text-slate-600 leading-relaxed mb-4">Weekly mock interviews by active leaders from Tier-1 tech firms. Direct feedback rubrics pinpoint student gaps.</p>
-        <div class="text-xs text-emerald-700 font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check</span><span>Silicon Valley &amp; Tier-1 Mentors</span></div>
-      </div>
-
-      <div class="p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:bg-white hover:-translate-y-1 transition-all soft-card-shadow reveal">
-        <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-ekai-orange flex items-center justify-center mb-5 shadow-sm">
-          <span class="material-symbols-outlined text-[22px]">analytics</span>
-        </div>
-        <h4 class="text-base font-bold text-navy-dark mb-2">Readout Dashboards &amp; Drives</h4>
-        <p class="text-xs text-slate-600 leading-relaxed mb-4">Real-time dashboards showing candidate readiness, paired with active introductions to 50+ hiring partners.</p>
-        <div class="text-xs text-emerald-700 font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check</span><span>91% Placement Verified</span></div>
-      </div>
-    </div>
+    <ol class="relative grid grid-cols-1 md:grid-cols-3 gap-10 reveal">
+      <div class="draw-line hidden md:block absolute top-[19px] left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-ekai-orange via-ekai-warm to-amber-400"></div>
+      <li class="relative">
+        <div class="step-dot relative z-10 w-10 h-10 rounded-full bg-ekai-orange text-white font-bold grid place-items-center mb-5" style="transition-delay:.4s">1</div>
+        <h3 class="font-bold text-lg mb-1">Tell us what you need</h3>
+        <p class="text-sm text-slate-300">Fill in the form below or call us. We will get back to you.</p>
+      </li>
+      <li class="relative">
+        <div class="step-dot relative z-10 w-10 h-10 rounded-full bg-ekai-orange text-white font-bold grid place-items-center mb-5" style="transition-delay:.8s">2</div>
+        <h3 class="font-bold text-lg mb-1">Short discussion</h3>
+        <p class="text-sm text-slate-300">We talk about your goals and suggest what fits.</p>
+      </li>
+      <li class="relative">
+        <div class="step-dot relative z-10 w-10 h-10 rounded-full bg-ekai-orange text-white font-bold grid place-items-center mb-5" style="transition-delay:1.2s">3</div>
+        <h3 class="font-bold text-lg mb-1">We get started</h3>
+        <p class="text-sm text-slate-300">We agree on the scope and timeline, then begin.</p>
+      </li>
+    </ol>
   </div>
+    </div>
 </section>
 
-<!-- ═══════════════ SLA MATRIX CALCULATOR ═══════════════ -->
-<section class="max-w-container-max mx-auto px-4 md:px-8 py-16 w-full" id="calculator">
-  <div class="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-10 soft-card-shadow reveal">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      
-      <!-- Selector -->
-      <div class="lg:col-span-5 flex flex-col">
-        <div class="inline-flex items-center gap-1.5 text-ekai-orange text-xs uppercase tracking-widest font-bold mb-2">
-          <span class="material-symbols-outlined text-[16px]">tune</span>
-          <span>Diagnostic SLA Matrix</span>
-        </div>
-        <h3 class="text-2xl sm:text-3xl font-bold text-navy-dark mb-2">Calculate Your Trajectory</h3>
-        <p class="text-slate-600 text-xs sm:text-sm mb-6">Toggle your persona below to review your exact roadmap and verified deliverables.</p>
-
-        <div class="space-y-3 mb-6">
-          <button class="calc-btn w-full text-left p-4 rounded-xl transition-all flex items-center justify-between" data-key="b2c" id="calc-btn-b2c">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-ekai-orange">
-                <span class="material-symbols-outlined text-[18px]">person</span>
-              </div>
-              <div>
-                <div class="text-sm font-bold">Individual Professional (B2C)</div>
-                <div class="text-xs text-slate-500">Career leap, ATS pass, offer negotiation</div>
-              </div>
-            </div>
-            <span class="material-symbols-outlined text-[18px] chevron-icon">chevron_right</span>
-          </button>
-
-          <button class="calc-btn w-full text-left p-4 rounded-xl transition-all flex items-center justify-between" data-key="b2b" id="calc-btn-b2b">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-lg bg-blue-100/60 flex items-center justify-center text-blue-700">
-                <span class="material-symbols-outlined text-[18px]">domain</span>
-              </div>
-              <div>
-                <div class="text-sm font-bold">Startup Founder &amp; CEO (B2B)</div>
-                <div class="text-xs text-slate-500">Turnkey HR stack, compliance, offshore pod</div>
-              </div>
-            </div>
-            <span class="material-symbols-outlined text-[18px] chevron-icon">chevron_right</span>
-          </button>
-
-          <button class="calc-btn w-full text-left p-4 rounded-xl transition-all flex items-center justify-between active" data-key="prc" id="calc-btn-prc">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-lg bg-emerald-100/60 flex items-center justify-center text-emerald-700">
-                <span class="material-symbols-outlined text-[18px]">school</span>
-              </div>
-              <div>
-                <div class="text-sm font-bold">College / Bootcamp Dean (PRC)</div>
-                <div class="text-xs text-slate-500">Placement Readiness Cell, mock drives</div>
-              </div>
-            </div>
-            <span class="material-symbols-outlined text-[18px] chevron-icon">chevron_right</span>
-          </button>
-        </div>
-
-        <div class="flex items-center gap-2 text-slate-500 text-xs">
-          <span class="material-symbols-outlined text-[17px] text-emerald-600">verified_user</span>
-          <span>All readouts backed by contractual SLAs &amp; NDA</span>
-        </div>
-      </div>
-
-      <!-- Output -->
-      <div class="lg:col-span-7 bg-slate-50/90 border border-slate-200/90 rounded-2xl p-6 sm:p-8">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-6 gap-2">
-          <div>
-            <div class="text-xs text-slate-400 uppercase font-semibold" id="calc-label">Division 03 // Institutional PRC</div>
-            <div class="text-lg sm:text-xl font-bold text-navy-dark" id="calc-title">Outsourced Placement Readiness Cell (PRC)</div>
-          </div>
-          <div class="px-3 py-1 rounded-full font-semibold text-xs shrink-0 text-emerald-800 bg-emerald-100/80" id="calc-sla">Full Semester Integration SLA</div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6" id="calc-grid"></div>
-
-        <div class="p-4 rounded-xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <div class="text-xs text-slate-400">Target Inflection Point:</div>
-            <div class="text-sm font-bold text-navy-dark" id="calc-summary">91% Verified Cohort Placement Within 90 Days</div>
-          </div>
-          <a class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm hover:brightness-105 text-white text-xs font-bold transition-all shadow-md shadow-orange-500/20 text-center whitespace-nowrap" href="#contact" id="calc-cta">Request Institutional Proposal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ CONTACT ═══════════════ -->
-<section class="py-20 bg-slate-50/70 border-t border-slate-200 relative" id="contact">
+<section class="py-20" id="contact">
   <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">
-        <span class="material-symbols-outlined text-[15px]">contact_phone</span>
-        <span>Direct Access &amp; Consultations</span>
-      </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Schedule Your Strategic Diagnostic</h2>
-      <p class="text-slate-600 text-sm sm:text-base mt-2">
-        Whether accelerating your career, establishing an offshore ops pod, or elevating campus placement rates—our advisors reply within 24 business hours.
-      </p>
+    <div class="max-w-2xl mb-10 reveal">
+      <h2 class="text-3xl sm:text-4xl font-bold text-navy-dark tracking-tight">Contact us</h2>
+      <p class="text-slate-600 mt-2">Send us a message and we will reply as soon as we can.</p>
     </div>
-
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- Contact Info -->
-      <div class="lg:col-span-5 space-y-6 reveal">
-        <div class="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 soft-card-shadow">
-          <h3 class="text-base font-bold text-navy-dark mb-4 flex items-center gap-2">
-            <span class="material-symbols-outlined text-ekai-orange">public</span>
-            <span>Reach Us Instantly</span>
-          </h3>
-          <div class="space-y-3">
-            <a class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 hover:bg-orange-50/40 border border-slate-100 hover:border-orange-200 transition-all group" href="tel:+919214953581">
-              <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-[20px]">call</span>
-              </div>
-              <div>
-                <div class="text-xs text-slate-400">Direct Phone / WhatsApp</div>
-                <div class="text-sm font-bold text-navy-dark group-hover:text-ekai-orange transition-colors">+91 92149 53581</div>
-                <div class="text-[11px] text-slate-500 mt-0.5">Mon–Sat • 9:00 AM – 8:00 PM IST</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 hover:bg-orange-50/40 border border-slate-100 hover:border-orange-200 transition-all group" href="mailto:info@ekaiglobal.com">
-              <div class="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 text-ekai-orange flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-[20px]">mail</span>
-              </div>
-              <div>
-                <div class="text-xs text-slate-400">Official Correspondence</div>
-                <div class="text-sm font-bold text-navy-dark group-hover:text-ekai-orange transition-colors">info@ekaiglobal.com</div>
-                <div class="text-[11px] text-slate-500 mt-0.5">Strict 24-Hour SLA Guaranteed</div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 soft-card-shadow">
-          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Global Operating Footprint</h4>
-          <div class="grid grid-cols-2 gap-3 text-xs">
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇺🇸 United States</div></div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇬🇧 United Kingdom</div></div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇦🇪 UAE</div></div>
-            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-orange-200 transition"><div class="font-bold text-navy-dark">🇮🇳 India</div></div>
-          </div>
-        </div>
+      <div class="lg:col-span-5 space-y-4 reveal">
+        <a class="spot glass block p-5 rounded-2xl bg-white border border-slate-200" href="tel:+919214953581">
+          <div class="text-xs text-slate-500">Phone / WhatsApp</div>
+          <div class="font-bold text-navy-dark">+91 92149 53581</div>
+          <div class="text-xs text-slate-500 mt-0.5">Mon–Sat, 9:00 AM – 8:00 PM IST</div>
+        </a>
+        <a class="spot glass block p-5 rounded-2xl bg-white border border-slate-200" href="mailto:info@ekaiglobal.com">
+          <div class="text-xs text-slate-500">Email</div>
+          <div class="font-bold text-navy-dark">info@ekaiglobal.com</div>
+        </a>
       </div>
 
-      <!-- Form -->
-      <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 soft-card-shadow reveal">
+      <div class="lg:col-span-7 glass rounded-2xl p-6 sm:p-8 reveal">
         <form id="leadForm" class="space-y-4" novalidate>
           <div>
-            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="interest">Select Engagement Vector *</label>
+            <label class="block text-sm font-semibold text-slate-700 mb-1" for="interest">I am interested in *</label>
             <select class="form-field" id="interest" name="interest" required>
-              <option value="">-- Select an option --</option>
-              <option value="Division 1: Career (B2C)">Division 1: Career Acceleration (Resume, 1:1 Coaching)</option>
-              <option value="Division 2: Startup HR (B2B)">Division 2: Startup HR, Compliance &amp; Offshore Ops</option>
-              <option value="Division 3: Institutional PRC">Division 3: Institutional PRC (College Partnership)</option>
-              <option value="General Enquiry">Other / General Enterprise Inquiry</option>
+              <option value="">Select an option</option>
+              <option value="Startup HR and operations">HR and operations for my startup or business</option>
+              <option value="Career guidance">Career guidance</option>
+              <option value="College placement readiness">College placement readiness</option>
+              <option value="Other">Something else</option>
             </select>
           </div>
-
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="name">Your Full Name *</label>
-              <input class="form-field" id="name" name="name" placeholder="e.g. Sarah Jenkins" required type="text">
+              <label class="block text-sm font-semibold text-slate-700 mb-1" for="name">Full name *</label>
+              <input class="form-field" id="name" name="name" required type="text" autocomplete="name">
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="email">Official Email *</label>
-              <input class="form-field" id="email" name="email" placeholder="name@company.com" required type="email">
+              <label class="block text-sm font-semibold text-slate-700 mb-1" for="email">Email *</label>
+              <input class="form-field" id="email" name="email" required type="email" autocomplete="email">
             </div>
           </div>
-
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="phone">Phone / WhatsApp *</label>
-              <input class="form-field" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required type="tel">
+              <label class="block text-sm font-semibold text-slate-700 mb-1" for="phone">Phone / WhatsApp *</label>
+              <input class="form-field" id="phone" name="phone" required type="tel" autocomplete="tel">
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="organization">Company or College</label>
-              <input class="form-field" id="organization" name="organization" placeholder="e.g. Stealth Startup or IIT" type="text">
+              <label class="block text-sm font-semibold text-slate-700 mb-1" for="organization">Company or college (optional)</label>
+              <input class="form-field" id="organization" name="organization" type="text" autocomplete="organization">
             </div>
           </div>
-
           <div>
-            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1" for="message">Context / Immediate Objective</label>
-            <textarea class="form-field" id="message" name="message" placeholder="Tell us about your target role, team size, current friction, or timeline..." rows="3"></textarea>
+            <label class="block text-sm font-semibold text-slate-700 mb-1" for="message">Message (optional)</label>
+            <textarea class="form-field" id="message" name="message" rows="3" placeholder="e.g. team size, what you need help with"></textarea>
           </div>
-
-          <div class="pt-2">
-            <button id="submitBtn" type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-ekai-orange to-ekai-warm hover:brightness-105 text-white font-bold text-sm shadow-md shadow-orange-500/20 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-              <span id="btnText">Submit Diagnostic Intake</span>
-              <span id="btnLoader" class="hidden">Sending...</span>
-              <span class="material-symbols-outlined text-[18px]" id="btnIcon">send</span>
-            </button>
-            <div class="text-[11px] text-slate-400 text-center mt-2 font-medium">
-              Strictly Confidential • NDA Protected • No Spam Guarantee
-            </div>
+          <button id="submitBtn" type="submit" class="btn-shine btn-lift w-full py-3.5 px-6 rounded-xl bg-ekai-orange hover:bg-ekai-orange-light text-white font-bold text-sm disabled:opacity-70 disabled:cursor-not-allowed">
+            <span id="btnText">Send message</span>
+            <span id="btnLoader" class="hidden">Sending...</span>
+          </button>
+          <div id="formSuccess" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium" role="status">
+            Thank you. We have received your message and will contact you soon.
           </div>
-
-          <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium">
-            ✅ Thank you! Your strategic diagnostic request has been received. A partner will contact you within 24 hours.
-          </div>
-          <div id="formError" class="hidden mt-4 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-sm font-medium">
-            ⚠️ Something went wrong. Please try again or email us directly at info@ekaiglobal.com
+          <div id="formError" class="hidden p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-sm font-medium" role="alert">
+            The message could not be sent. Please try again, or email us at info@ekaiglobal.com.
           </div>
         </form>
       </div>
@@ -744,64 +275,13 @@
 
 </main>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
-<footer class="w-full bg-slate-50 border-t border-slate-200 pt-16 pb-12">
-  <div class="max-w-container-max mx-auto px-4 md:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-      <div class="lg:col-span-2">
-        <a class="inline-block mb-6 logo-container" href="#hero">
-          <img alt="Ekai Global" src="images/logo.png" class="footer-logo-img">
-        </a>
-        <p class="text-xs sm:text-sm text-slate-500 max-w-sm mb-4 leading-relaxed">
-          Institutional workforce architecture, startup operational velocity, and high-impact individual trajectory engineering across four continents.
-        </p>
-        <div class="text-xs text-slate-600 space-y-1.5 mb-4">
-          <div><strong>Email:</strong> <a class="text-ekai-orange hover:underline font-medium" href="mailto:info@ekaiglobal.com">info@ekaiglobal.com</a></div>
-          <div><strong>Phone:</strong> <a class="text-slate-800 hover:text-ekai-orange hover:underline font-medium" href="tel:+919214953581">+91 92149 53581</a></div>
-          <div><strong>Footprint:</strong> US • UK • UAE • India</div>
-        </div>
-      </div>
-
-      <div>
-        <div class="text-sm font-bold text-navy-dark mb-3">Division 1: Career</div>
-        <ul class="space-y-2 text-xs text-slate-500">
-          <li><a class="footer-link" href="#services-b2c">1:1 Path Clarity</a></li>
-          <li><a class="footer-link" href="#services-b2c">ATS Resume (98.4%)</a></li>
-          <li><a class="footer-link" href="#services-b2c">LinkedIn Engineering</a></li>
-          <li><a class="footer-link" href="#services-b2c">Mock Interview Script</a></li>
-          <li><a class="footer-link" href="#services-b2c">IT Pathways + Udemy</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="text-sm font-bold text-navy-dark mb-3">Division 2: HR &amp; Ops</div>
-        <ul class="space-y-2 text-xs text-slate-500">
-          <li><a class="footer-link" href="#services-b2b">0-to-1 HR Infrastructure</a></li>
-          <li><a class="footer-link" href="#services-b2b">Multi-Jurisdiction Compliance</a></li>
-          <li><a class="footer-link" href="#services-b2b">India Offshore Pods</a></li>
-          <li><a class="footer-link" href="#services-b2b">Compensation &amp; ESOP</a></li>
-          <li><a class="footer-link" href="#services-b2b">14-Day Delivery SLA</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="text-sm font-bold text-navy-dark mb-3">Division 3: PRC</div>
-        <ul class="space-y-2 text-xs text-slate-500">
-          <li><a class="footer-link" href="#services-prc">Turnkey PRC Outsourcing</a></li>
-          <li><a class="footer-link" href="#services-prc">Batch Resume Standard</a></li>
-          <li><a class="footer-link" href="#services-prc">Corporate Mentor Panels</a></li>
-          <li><a class="footer-link" href="#services-prc">Outcome Readouts</a></li>
-          <li><a class="footer-link" href="#contact">Request PRC Proposal</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="border-t border-slate-200 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-      <div>© 2025 Ekai Global Inc. All rights reserved. Operating across US, UK, UAE, and India.</div>
-      <a class="hover:text-slate-900 transition-colors flex items-center gap-1 font-medium text-slate-700" href="#hero">
-        <span>Back to top</span>
-        <span class="material-symbols-outlined text-[14px]">arrow_upward</span>
-      </a>
+<footer class="w-full glass py-10">
+  <div class="max-w-container-max mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+    <div>© 2026 Ekai Global. All rights reserved.</div>
+    <div class="flex items-center gap-5">
+      <a class="hover:text-ekai-orange" href="mailto:info@ekaiglobal.com">info@ekaiglobal.com</a>
+      <a class="hover:text-ekai-orange" href="tel:+919214953581">+91 92149 53581</a>
+      <a class="hover:text-ekai-orange" href="#hero">Back to top</a>
     </div>
   </div>
 </footer>
