@@ -83,6 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
     msgSuccess.classList.add('hidden');
     msgError.classList.add('hidden');
 
+    // Spam trap: bots fill this hidden field, people never see it
+    if (form.elements['_gotcha'] && form.elements['_gotcha'].value) return;
+
     let valid = true;
     form.querySelectorAll('[required]').forEach(field => {
       field.classList.remove('error');
@@ -90,6 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const email = form.elements['email'];
     if (email.value && !emailRegex.test(email.value)) { email.classList.add('error'); valid = false; }
+    const phone = form.elements['phone'];
+    if (phone.value && phone.value.replace(/\D/g, '').length < 8) { phone.classList.add('error'); valid = false; }
 
     if (!valid) {
       const firstError = form.querySelector('.error');
